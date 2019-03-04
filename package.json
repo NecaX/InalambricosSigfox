@@ -1,0 +1,11 @@
+{
+  "name": "inalambricossigfox",
+  "version": "1.0.0",
+  "description": "Bot de Telegram para la asignatura de Dispositivos Inalámbricos",
+  "main": "bot.js",
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.30.0"
+  }
+}
