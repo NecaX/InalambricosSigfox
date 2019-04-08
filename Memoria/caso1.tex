@@ -1,0 +1,85 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{imakeidx}
+\usepackage{graphicx}
+\usepackage{apacite}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage[hypcap=true]{caption}
+\setlength{\parindent}{0pt}
+\addto\captionsspanish{% Replace "english" with the language you use
+  \renewcommand{\contentsname}%
+    {Tabla de contenidos}%
+  \renewcommand\spanishtablename{Tabla}
+  \renewcommand\spanishlisttablename{Índice de tablas}
+}
+\usepackage[left=2.54cm,right=2.54cm,top=2.54cm,bottom=2.54cm]{geometry}
+\author{Pablo Olivas Auñón}
+\title{Proyecto Sigfox - Monitor de salud}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Proyecto Sigfox - Monitor de salud}
+\rhead{\thepage}
+\cfoot{DISPOSITIVOS Y REDES INALÁMBRICOS}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\begin{document}
+
+\begin{titlepage}
+\thispagestyle{empty}
+\centering
+	\includegraphics[width=0.35\textwidth]{castilla.png}\par\vspace{1cm}
+	{\scshape\LARGE Universidad de Castilla-La Mancha \par}
+	\vspace{1cm}
+	{\scshape\Large DISPOSITIVOS Y REDES INALÁMBRICOS\par}
+	\vspace{1.5cm}
+	{\huge\bfseries Proyecto Sigfox - Monitor de salud\par}
+	\vspace{2cm}
+	{\Large\itshape Pablo Olivas Auñón\par}
+	{\Large\itshape Antonio Morán Muñoz\par}
+
+	\vfill
+
+% Bottom of the page
+	{CURSO ACADÉMICO 2018/2019}
+	\vfill
+	{\large \today\par}
+\end{titlepage}
+
+% Tabla de contenidos
+\thispagestyle{empty}
+\tableofcontents
+\newpage
+
+% Índice de figuras
+\thispagestyle{empty}
+\listoffigures
+\newpage
+
+% Índice de tablas
+\thispagestyle{empty}
+\listoftables
+\newpage
+
+\section{Objetivos del proyecto}
+El objetivo del proyecto es poder monitorizar de forma sencilla y establecer un sistema de alertas para una serie de valores obtenidos de un paciente (por ejemplo número de pulsaciones por minutos, temperatura corporal, tensión o nivel de glucosa en sangre), no importando la ubicación del mismo.
+
+\section{Diseño del proyecto}
+La tecnología Sigfox nos permite enviar mensajes desde un emisor en casi cualquier parte del país hasta una desde la que podemos tratarlos y enviar alertas a multiples receptores. Esto es lo que nos ha permitido crear este monitor de salud basado en dicha tecnología.\\ 
+Nuestro monitor de salud permite; tras obtener las pulsaciones, temperatura, tensión y nivel de glucosa en sangre; enviar estos dato con una cierta frecuencia a la nube de Sigfox, donde serán reenviados al centro de IOT de Azure para finalmente ser recibidos por nuestro servidor. Con los datos ya en manos del usuario final se distinguen dos usos diferenciados. Primero, tenemos una sistema de alertas para los receptores finales mediante un bot de Telegram, que recibirán si hay algún valor extraño en los datos obtenidos del paciente. El segundo uso consiste en una pequeña base de datos de fácil uso para poder visualizar el historial de todas las constantes del paciente.
+
+\section{Desarrollo del proyecto}
+
+
+\begin{figure}[h] \label{fig:1}
+\begin{center}
+%\includegraphics[scale=1.2]{imagen.png}
+\end{center}
+\end{figure}
+
+
+\end{document}
