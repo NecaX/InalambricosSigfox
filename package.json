@@ -6,6 +6,10 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@azure/event-hubs": "^1.0.8",
+    "csv": "^5.1.1",
+    "excel4node": "^1.7.0",
+    "excell": "0.0.0-alpha-1",
     "node-telegram-bot-api": "^0.30.0"
   }
 }
