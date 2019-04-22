@@ -1,0 +1,3 @@
+sigfox Callback
+payload: pulsaciones::uint:16:little-endian temperatura::uint:16:little-endian tension::uint:16:little-endian glucosa::uint:16:little-endian
+Connection: HostName=conexion-arduino.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=fkpRYvpRUGyF1atep8hQ3OXekvUSF5G1t8mWXR94XKQ=

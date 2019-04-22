@@ -32,13 +32,13 @@ var printError = function (err) {
   
 var printMessage = function (message) {
     console.log('Mensaje recibido desde dispositivo Sigfox');
-    //console.log(message.body);
+    console.log(message.body);
     var current_hour = date.getHours().toString()+':'+date.getMinutes().toString();
     worksheet.cell(i,1).string(current_hour).style(style);
-    worksheet.cell(i,2).number(message.body.pulsaciones).style(style);
-    worksheet.cell(i,3).number(message.body.temperatura).style(style);
-    worksheet.cell(i,4).number(message.body.tension).style(style);
-    worksheet.cell(i,5).number(message.body.glucosa).style(style);
+    worksheet.cell(i,2).string(message.body.pulsaciones).style(style);
+    worksheet.cell(i,3).string(message.body.temperatura).style(style);
+    worksheet.cell(i,4).string(message.body.tension).style(style);
+    worksheet.cell(i,5).string(message.body.glucosa).style(style);
     i = i+1;
     workbook.write('Excel.xlsx');
 
@@ -93,6 +93,5 @@ bot.onText(/\/conectar/, (msg, match) => {
 });
 
 bot.onText(/\/about/, (msg, match) => {
-    bot.sendMessage(msg.chat.id, 'Github: https://github.com/NecaX/InalambricosSigfox');
+    bot.sendMessage(chatId, 'Github: https://github.com/NecaX/InalambricosSigfox');
 });
-
